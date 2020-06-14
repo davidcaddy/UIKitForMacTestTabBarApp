@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
         
-        #if targetEnvironment(UIKitForMac)
+        #if targetEnvironment(macCatalyst)
         if let windowScene = scene as? UIWindowScene {
             if let titlebar = windowScene.titlebar {
                 let toolbar = NSToolbar(identifier: "testToolbar")
